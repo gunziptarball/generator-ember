@@ -6,12 +6,16 @@
 basePath = '';
 
 
+// testing framework to choose, `jasmine` is default.
+frameworks = [
+  <% if (testFramework === 'mocha') { %>'mocha'
+  <% } else                         { %>'jasmine'
+  <% } %>
+];
+
+
 // list of files / patterns to load in the browser
 files = [
-  <% if (testFramework === 'mocha') { %>MOCHA,
-  MOCHA_ADAPTER,<% } else { %>
-  JASMINE,
-  JASMINE_ADAPTER,<% } %>
   'app/bower_components/jquery/jquery.min.js',
   'app/bower_components/handlebars/handlebars.runtime.js',
   'app/bower_components/ember/ember-1.0.0-rc.6.1.js',
