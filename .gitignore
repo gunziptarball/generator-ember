@@ -2,3 +2,5 @@ node_modules
 test/temp
 temp/
 npm-debug.log
+.idea
+generator-ember.iml
