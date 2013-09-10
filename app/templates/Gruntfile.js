@@ -39,10 +39,7 @@ module.exports = function (grunt) {
                 files: ['test/spec/{,*/}*.coffee'],
                 tasks: ['coffee:test']
             },
-            compass: {
-                files: ['<%%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-                tasks: ['compass:server']
-            },
+
             neuter: {<% if (!options.coffee) { %>
                 files: ['<%%= yeoman.app %>/scripts/{,*/}*.js'],<% }else{ %>
                 files: ['.tmp/scripts/{,*/}*.js',
@@ -163,27 +160,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        compass: {
-            options: {
-                sassDir: '<%%= yeoman.app %>/styles',
-                cssDir: '.tmp/styles',
-                generatedImagesDir: '.tmp/images/generated',
-                imagesDir: '<%%= yeoman.app %>/images',
-                javascriptsDir: '<%%= yeoman.app %>/scripts',
-                fontsDir: '<%%= yeoman.app %>/styles/fonts',
-                importPath: 'app/bower_components',
-                httpImagesPath: '/images',
-                httpGeneratedImagesPath: '/images/generated',
-                httpFontsPath: '/styles/fonts',
-                relativeAssets: false
-            },
-            dist: {},
-            server: {
-                options: {
-                    debugInfo: true
-                }
-            }
-        },
+
         // not used since Uglify task does concat,
         // but still available if needed
         /*concat: {
@@ -292,17 +269,15 @@ module.exports = function (grunt) {
             server: [
                 'emberTemplates',
                 'coffee:dist',
-                'compass:server'
+
             ],
             test: [
                 'emberTemplates',
-                'coffee',
-                'compass'
+                'coffee'
             ],
             dist: [
                 'emberTemplates',
                 'coffee',
-                'compass:dist',
                 'imagemin',
                 'svgmin',
                 'htmlmin'

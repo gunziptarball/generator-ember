@@ -1,7 +1,7 @@
 {
   "name": "generator-ember",
   "version": "0.6.2",
-  "description": "Yeoman generator for Ember",
+  "description": "Yeoman generator for Ember (without compass)",
   "keywords": [
     "yeoman-generator",
     "scaffold",
@@ -10,13 +10,13 @@
     "mvc",
     "ember"
   ],
-  "homepage": "https://github.com/yeoman/generator-ember",
-  "bugs": "https://github.com/yeoman/generator-ember/issues",
+  "homepage": "https://github.com/gunziptarball/generator-ember",
+  "bugs": "https://github.com/gunziptarball/generator-ember/issues",
   "author": "Chrome Developer Relations",
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/yeoman/generator-ember.git"
+    "url": "git://github.com/gunziptarball/generator-ember.git"
   },
   "scripts": {
     "test": "mocha --reporter spec"
